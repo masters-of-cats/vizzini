@@ -32,7 +32,7 @@ var _ = Describe("DiskLimits", func() {
 			})
 		})
 
-		Context("when the disk limit is less than the contents to be copied in", func() {
+		XContext("when the disk limit is less than the contents to be copied in", func() {
 			It("should crash", func() {
 				lrp.DiskMb = 4
 				Expect(bbsClient.DesireLRP(logger, lrp)).To(Succeed())
@@ -66,7 +66,7 @@ var _ = Describe("DiskLimits", func() {
 			})
 		})
 
-		Context("when the disk limit is less than the size of the docker image", func() {
+		XContext("when the disk limit is less than the size of the docker image", func() {
 			It("should crash", func() {
 				lrp.DiskMb = 4
 				Expect(bbsClient.DesireLRP(logger, lrp)).To(Succeed())
